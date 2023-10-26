@@ -49,7 +49,7 @@ class Strip extends Component {
         canvas.deactivateAll().renderAll();
     }
     componentDidMount() {
-        var canvas = new fabric.Canvas('canvas');
+        var canvas = new fabric.Canvas('canvas', { interactive:false }); //disable user editing support
         var {padding, width, height, fill, stroke, fontFamily, strokeWidth, fontSize} = this.props;
         var rect = new fabric.Rect({
             top: padding,
